@@ -1,0 +1,9 @@
+applications:
+  - name: DemoSpring
+    memory: 1000M
+    random-route: true
+    instances: 1
+    env:
+      JPB_CONFIG_OPEN_JDK_JRE: '{ jre: { cersion: 17.+} }'
+    buildpack: https://github.com/cloudfoundry/java-buildpack.git
+    path: ./target/demo-0.0.1-SNAPSHOT.jar
